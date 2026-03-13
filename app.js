@@ -106,12 +106,12 @@ function connectWebSocket(streamer,auth){
     });
 
     socket.addEventListener("close",() =>{
-        console.log("Connection closed!");
+        alert("connection closed")
         setTimeout(() => connectWebSocket(streamer, auth), 5000);
     });
 
     socket.addEventListener("error",() =>{
-        console.log("Connection error!!!");
+        alert("Error")
         setTimeout(() => connectWebSocket(streamer, auth), 5000);
     });
 }
@@ -214,4 +214,5 @@ function appendMessage(channel, username, message, color, info) {
     messageDiv.addEventListener("click",(e) =>{
         console.log(username)
     })
+
 }
