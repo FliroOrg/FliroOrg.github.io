@@ -28,10 +28,12 @@ chatWindow.addEventListener("mouseleave",() =>{
 connect.addEventListener("click",() =>{
     let streamer = document.getElementById("newStreamer").value;
     let auth = document.getElementById("newAuth").value;
-    connectWebSocket(streamer, auth);
-    document.getElementById("login").style.display = "none"
-    chatWindow.style.display = "flex"
-    subWindow.style.display = "flex"
+    if(streamer && auth){
+        connectWebSocket(streamer, auth);
+        document.getElementById("login").style.display = "none"
+        chatWindow.style.display = "flex"
+        subWindow.style.display = "flex"
+    }
 });
 
 function connectWebSocket(streamer,auth){
@@ -217,4 +219,5 @@ function appendMessage(channel, username, message, color, info) {
     })
 
 }
+
 
