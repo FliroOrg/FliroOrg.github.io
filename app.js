@@ -168,6 +168,7 @@ function appendMessage(channel, username, message, color, info) {
     }
 
     let messageDiv = document.createElement("div");
+    messageDiv.id = "hover"
 
     let infoDiv = document.createElement("div");
     let channelDiv = document.createElement("div");
@@ -216,3 +217,4 @@ function appendMessage(channel, username, message, color, info) {
     })
 
 }
+
